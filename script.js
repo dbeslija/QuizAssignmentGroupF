@@ -21,8 +21,8 @@ const questions = [
     },
     {
         id: 4,
-        question: "4. Vad blir resultatet av 2 + 2?",
-        answers: [4, 22, NaN, undefined],
+        question: "4. Vad blir resultatet av '2' + 2?",
+        answers: ["4", "22", "NaN", "undefined"],
         correct: 1
     },
     {
@@ -75,12 +75,9 @@ function IsQuizApproved(points) {
         //Icke godkänd
     }
 }
-function userSelectedAnswer()
-{
-  document.querySelector(".question-area").addEventListener('click', function(event) 
-   {
-    if(event.target.checked === true) 
-        {
+function userSelectedAnswer() {
+    document.querySelector(".question-area").addEventListener('click', function (event) {
+        if (event.target.checked === true) {
            selectedAnswer = event.target.id;
            console.log(event.target.id);
            console.log(selectedAnswer);
@@ -89,8 +86,8 @@ function userSelectedAnswer()
    });
 }
 function nextQuestion() {
- let button = document.getElementById("next-question").addEventListener("click", function (){
-if(selectedAnswer===null ) {
+    let button = document.getElementById("next-question").addEventListener("click", function () {
+        if (selectedAnswer === null) {
    document.getElementById("user-error-message").textContent = "*Du måste välja ett svarsalternativ";
   
 }

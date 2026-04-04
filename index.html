@@ -1,55 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Quiz assignment group F</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div>
-        <h1>Quizspel grupp F</h1>
+      <h1>Quizspel grupp F</h1>
     </div>
     <main>
-        <div hidden id="approved">
+      <div hidden id="approved"></div>
+      <div hidden id="notapproved"></div>
 
+      <div class="question-area">
+        <h2 id="question-text"></h2>
+
+        <div class="questions-container">
+          <input type="radio" name="answer-radio" id="1" />
+          <p id="answer-text-1"></p>
         </div>
-        <div hidden id="notapproved">
 
+        <div class="questions-container">
+          <input type="radio" name="answer-radio" id="2" />
+          <p id="answer-text-2"></p>
         </div>
 
-        <div class="question-area">
+        <div class="questions-container">
+          <input type="radio" name="answer-radio" id="3" />
+          <p id="answer-text-3"></p>
+        </div>
 
-            <h2 id="question-text"></h2>
+        <div class="questions-container">
+          <input type="radio" name="answer-radio" id="4" />
+          <p id="answer-text-4"></p>
+        </div>
 
-            <div class="questions-container">
-                <input type="radio" name="answer-radio" id="1">
-                <p id="answer-text-1"></p>
-            </div>
+        <button id="next-question">Nästa fråga</button>
 
-            <div class="questions-container" >
-                <input type="radio" name="answer-radio" id="2">
-                <p id="answer-text-2"> </p>
-            </div>
-
-            <div class="questions-container">
-                <input type="radio" name="answer-radio" id="3">
-                <p id="answer-text-3"> </p>
-            </div>
-
-            <div class="questions-container">
-                <input type="radio" name="answer-radio" id="4">
-                <p id="answer-text-4"> </p>
-            </div>
-
-            <button id="next-question">Nästa fråga</button>
-           
-         <p id="user-error-message"></p>
-         </div>
+        <p id="user-error-message"></p>
+      </div>
     </main>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
