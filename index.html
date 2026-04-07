@@ -15,25 +15,26 @@
 
         <div class="question-area">
           <h2 id="question-text"></h2>
+          <div class="alternative-wrapper">
+            <div class="questions-container">
+              <input type="radio" name="answer-radio" id="0" />
+              <p id="answer-text-1"></p>
+            </div>
 
-          <div class="questions-container">
-            <input type="radio" name="answer-radio" id="0" />
-            <p id="answer-text-1"></p>
-          </div>
+            <div class="questions-container">
+              <input type="radio" name="answer-radio" id="1" />
+              <p id="answer-text-2"></p>
+            </div>
 
-          <div class="questions-container">
-            <input type="radio" name="answer-radio" id="1" />
-            <p id="answer-text-2"></p>
-          </div>
+            <div class="questions-container">
+              <input type="radio" name="answer-radio" id="2" />
+              <p id="answer-text-3"></p>
+            </div>
 
-          <div class="questions-container">
-            <input type="radio" name="answer-radio" id="2" />
-            <p id="answer-text-3"></p>
-          </div>
-
-          <div class="questions-container">
-            <input type="radio" name="answer-radio" id="3" />
-            <p id="answer-text-4"></p>
+            <div class="questions-container">
+              <input type="radio" name="answer-radio" id="3" />
+              <p id="answer-text-4"></p>
+            </div>
           </div>
 
           <button id="next-question">Nästa fråga</button>
@@ -41,9 +42,7 @@
           <p id="user-error-message"></p>
         </div>
       </main>
-      <div hidden class="final-result">
-
-      </div>
+      <div hidden class="final-result"></div>
     </div>
     <script src="script.js"></script>
   </body>
