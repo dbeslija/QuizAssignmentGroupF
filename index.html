@@ -8,41 +8,43 @@
   </head>
 
   <body>
-    <div>
-      <h1>Quizspel grupp F</h1>
-    </div>
-    <main>
-      <div hidden id="approved"></div>
-      <div hidden id="notapproved"></div>
+    <div class="wrapper-container">
+      <main class="quiz-container">
+        <div hidden id="approved"></div>
+        <div hidden id="notapproved"></div>
 
-      <div class="question-area">
-        <h2 id="question-text"></h2>
+        <div class="question-area">
+          <h2 id="question-text"></h2>
 
-        <div class="questions-container">
-          <input type="radio" name="answer-radio" id="1" />
-          <p id="answer-text-1"></p>
+          <div class="questions-container">
+            <input type="radio" name="answer-radio" id="0" />
+            <p id="answer-text-1"></p>
+          </div>
+
+          <div class="questions-container">
+            <input type="radio" name="answer-radio" id="1" />
+            <p id="answer-text-2"></p>
+          </div>
+
+          <div class="questions-container">
+            <input type="radio" name="answer-radio" id="2" />
+            <p id="answer-text-3"></p>
+          </div>
+
+          <div class="questions-container">
+            <input type="radio" name="answer-radio" id="3" />
+            <p id="answer-text-4"></p>
+          </div>
+
+          <button id="next-question">Nästa fråga</button>
+
+          <p id="user-error-message"></p>
         </div>
+      </main>
+      <div hidden class="final-result">
 
-        <div class="questions-container">
-          <input type="radio" name="answer-radio" id="2" />
-          <p id="answer-text-2"></p>
-        </div>
-
-        <div class="questions-container">
-          <input type="radio" name="answer-radio" id="3" />
-          <p id="answer-text-3"></p>
-        </div>
-
-        <div class="questions-container">
-          <input type="radio" name="answer-radio" id="4" />
-          <p id="answer-text-4"></p>
-        </div>
-
-        <button id="next-question">Nästa fråga</button>
-
-        <p id="user-error-message"></p>
       </div>
-    </main>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
