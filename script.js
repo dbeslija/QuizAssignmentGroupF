@@ -81,7 +81,7 @@ function IsQuizApproved(points) {
     if (points >= 5) {//Godkänd
         
         paragraph.textContent = `Du blev godkänd totalt:${points} poäng av ${questions.length} 🥳.`;
-
+        
     }
     else {
         //Icke godkänd
@@ -166,7 +166,7 @@ function assignPoints(currentQuestion, selectedAnswer) {
 }
 
 function userSelectedAnswer() {
-    document.querySelector(".question-area").addEventListener('click', function (event) {
+    document.querySelector(".question-area").addEventListener('change', function (event) {
         if (event.target.checked === true) {
             selectedAnswer = event.target.id;
             correctAnswer(showCurrentQuestion, selectedAnswer);
