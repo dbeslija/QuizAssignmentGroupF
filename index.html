@@ -8,7 +8,9 @@
   </head>
 
   <body>
+    <div class="point-counter">Poäng: 0</div>
     <div class="wrapper-container">
+    
       <main class="quiz-container">
         <div hidden id="approved"></div>
         <div hidden id="notapproved"></div>
@@ -38,11 +40,17 @@
           </div>
 
           <button id="next-question">Nästa fråga</button>
+        
 
           <p id="user-error-message"></p>
         </div>
-      </main>
-      <div hidden class="final-result"></div>
+      </main >
+      <div hidden class="final-result">
+        <p class="result-text"></p>
+        <button class="reset-game">Börja om</button>
+       
+      </div> 
+      
     </div>
     <script src="script.js"></script>
   </body>

@@ -56,11 +56,14 @@ let points = 0;
 let showCurrentQuestion = 0;
 let showResult = false;
 let IsApproved = false;
+
 let selectedAnswer = null;
+showQuestion(showCurrentQuestion);
 
 
 let nodeList = document.querySelectorAll("input");
 let errorMsg = document.getElementById("user-error-message")
+const paragraph = document.querySelector(".result-text")
 // function showResult() 
 // {
 //     if(currentQuestion > 7) 
@@ -70,15 +73,30 @@ let errorMsg = document.getElementById("user-error-message")
 // }
 
 function IsQuizApproved(points) {
+    console.log("🦊")
+    document.querySelector(".quiz-container").classList.add("hidden");
+    document.querySelector(".final-result").removeAttribute("hidden");
+   
 
-    if (points > 5) {//Godkänd
+    if (points >= 5) {//Godkänd
+        
+        paragraph.textContent = `Du blev godkänd totalt:${points} poäng av ${questions.length} 🥳.`;
 
     }
     else {
         //Icke godkänd
+        paragraph.textContent = `Du blev tyvärr inte godkänd, du fick totalt:${points} poäng av ${questions.length}😢.`;
     }
 
+
 }
+
+function resetGame(){
+    window.location.reload();
+    
+}
+const resetButton = document.querySelector(".reset-game")
+resetButton.addEventListener("click", resetGame)
 
 function resetState() {
     selectedAnswer = null;
@@ -143,8 +161,10 @@ function assignPoints(currentQuestion, selectedAnswer) {
 
         points++
         console.log(points)
+        document.querySelector(".point-counter").textContent = `Poäng: ${points}`;
     }
 }
+
 function userSelectedAnswer() {
     document.querySelector(".question-area").addEventListener('click', function (event) {
         if (event.target.checked === true) {
@@ -199,6 +219,9 @@ function showQuestion(questionIndex) {
         document.getElementById("answer-text-3").textContent = showAnswer3;
         document.getElementById("answer-text-4").textContent = showAnswer4;
     } else {
+        IsQuizApproved(points);
+        
+        
         // console.log("final result");
 
         // ta bort frågorna och svaren
@@ -209,6 +232,7 @@ function showQuestion(questionIndex) {
 //spara i LocalStorage för att behålla statet och vilketn fråga de är på samt hur många poäng man har.
 //När vi bockar i ett svar ska rätt svar komma upp (och om man har svarat rätt eller fel)
 
-showQuestion(showCurrentQuestion);
+
+
 nextQuestion();
 userSelectedAnswer();
